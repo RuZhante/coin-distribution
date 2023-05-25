@@ -47,9 +47,14 @@ export class CoinExchangeResponseDto
   amount: number;
   from: string;
   to: string;
-  result: number;
+  result: string;
 
-  static create(props: CoinExchangeResponseDto): CoinExchangeResponseDto {
-    return Object.assign(new CoinExchangeResponseDto(), props);
+  static create({
+    amount,
+    from,
+    to,
+    result,
+  }: CoinExchangeResponseDto): CoinExchangeResponseDto {
+    return { amount, from, to, result };
   }
 }
