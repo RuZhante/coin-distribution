@@ -22,7 +22,7 @@ export class CoinPriceService {
   constructor(
     private readonly httpService: HttpService,
     // Inject cache manager into service constructor
-    @Inject(CACHE_MANAGER) private cacheManager: Cache,
+    @Inject(CACHE_MANAGER) private cacheManager: Cache, // It is better to use redis
   ) {}
 
   async getCoinsPrices() {
